@@ -1,0 +1,53 @@
+{
+    "name": "municipio/municipio-boilerplate-headless",
+    "description": "Boilerplate for a headless setup of Wordpress with Municipio",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Whitespace Dev",
+            "email": "code@whitespace.se"
+        }
+    ],
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.8.7",
+                "type": "wordpress-muplugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+                },
+                "require": {
+                    "philippbaschke/acf-pro-installer": "^1.0",
+                    "composer/installers": "^1.0"
+                }
+            }
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "johnpbloch/wordpress": ">=4.9",
+        "municipio/municipio-bundle-headless": "dev-master"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yarn install",
+            "git init",
+            "git add -A",
+            "git commit -m'🎉 Create project using municipio/municipio-boilerplate-headless'"
+        ]
+    }
+}

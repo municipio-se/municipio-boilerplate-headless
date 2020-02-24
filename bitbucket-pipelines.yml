@@ -1,0 +1,14 @@
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install prettier @prettier/plugin-php
+          - npm run format
+          - git add -A
+          - git diff-index --quiet HEAD || git commit -m"🎨 Auto-fix code
+            formatting [skip ci]"
+          - git push

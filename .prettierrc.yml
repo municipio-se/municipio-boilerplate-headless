@@ -1,0 +1,25 @@
+printWidth: 80
+tabWidth: 2
+useTabs: false
+
+semi: true
+singleQuote: false
+quoteProps: as-needed
+jsxSingleQuote: false
+
+trailingComma: all
+bracketSpacing: true
+jsxBracketSameLine: false
+arrowParens: always
+
+proseWrap: always
+htmlWhitespaceSensitivity: ignore
+
+# PHP
+braceStyle: 1tbs
+trailingCommaPHP: php7.2
+
+overrides:
+  - files: composer.json
+    options:
+      tabWidth: 4

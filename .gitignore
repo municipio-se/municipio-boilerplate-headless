@@ -1,0 +1,31 @@
+# Wordpress plugins
+/wp-content/plugins/*
+
+# Wordpress themes
+/wp-content/themes/municipio
+# /wp-content/themes/*
+# !/wp-content/themes/mytheme
+
+# Wordpress uploads
+/wp-content/uploads/*
+
+# Wordpress config
+/config/database.php
+/config/salts.php
+/config/cache.php
+/config/developer.php
+/config/multisite.php
+/config/plugins.php
+
+# Vendor directories
+/vendor
+/wp
+
+# Operating system files
+.DS_Store
+
+#phpintel
+.phpintel
+
+# Node
+node_modules

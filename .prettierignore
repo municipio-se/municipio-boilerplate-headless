@@ -1,0 +1,24 @@
+# Package files
+composer.lock
+package-lock.json
+
+/wp-content/*
+
+# Plugins
+!/wp-content/plugins
+/wp-content/plugins/*
+
+# Themes
+!/wp-content/themes
+/wp-content/themes/municipio
+# /wp-content/themes/*
+# !/wp-content/themes/mytheme
+
+# Vendor directories
+vendor
+/wp
+
+# Generated files
+dist
+tmp
+*.min.*
