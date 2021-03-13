@@ -1,50 +1,50 @@
 {
-    "name": "municipio/municipio-boilerplate-headless",
-    "description": "Boilerplate for a headless setup of Wordpress with Municipio",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Whitespace Dev",
-            "email": "code@whitespace.se"
-        }
-    ],
-    "type": "project",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.8.12",
-                "type": "wordpress-plugin",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
-                }
-            }
-        }
-    ],
-    "config": {
-        "sort-packages": true,
-        "vendor-dir": "vendor"
-    },
-    "require": {
-        "roots/wordpress": "^5.0",
-        "ffraenz/private-composer-installer": "^5.0",
-        "municipio/municipio-bundle-headless": "dev-master"
-    },
-    "extra": {
-        "wordpress-install-dir": "wp"
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "yarn install",
-            "git init",
-            "git add -A",
-            "git commit -m'🎉 Create project using municipio/municipio-boilerplate-headless'"
-        ]
+  "name": "municipio/municipio-boilerplate-headless",
+  "description": "Boilerplate for a headless setup of Wordpress with Municipio",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Whitespace Dev",
+      "email": "code@whitespace.se"
     }
+  ],
+  "type": "project",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.12",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
+        }
+      }
+    }
+  ],
+  "config": {
+    "sort-packages": true,
+    "vendor-dir": "vendor"
+  },
+  "require": {
+    "roots/wordpress": "^5.0",
+    "ffraenz/private-composer-installer": "^5.0",
+    "municipio/municipio-bundle-headless": "dev-master"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "yarn install",
+      "git init",
+      "git add -A",
+      "git commit -m'🎉 Create project using municipio/municipio-boilerplate-headless'"
+    ]
+  }
 }
