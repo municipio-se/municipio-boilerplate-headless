@@ -17,6 +17,9 @@
 /config/multisite.php
 /config/plugins.php
 
+# Env
+.env
+
 # Vendor directories
 /vendor
 /wp
@@ -29,3 +32,9 @@
 
 # Node
 node_modules
+
+# Yarn
+package-lock.json
+
+# Logs
+*.log
