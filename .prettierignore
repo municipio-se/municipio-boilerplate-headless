@@ -14,11 +14,16 @@ package-lock.json
 # /wp-content/themes/*
 # !/wp-content/themes/mytheme
 
+# Uploads
+/wp-content/uploads/*
+
 # Vendor directories
-vendor
+/vendor
 /wp
 
 # Generated files
 dist
 tmp
 *.min.*
+*.min-*
+acf-fields
