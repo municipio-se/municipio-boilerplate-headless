@@ -16,5 +16,6 @@ proseWrap: always
 htmlWhitespaceSensitivity: ignore
 
 # PHP
+phpVersion: "7.2"
 braceStyle: 1tbs
-trailingCommaPHP: php7.2
+trailingCommaPHP: true
