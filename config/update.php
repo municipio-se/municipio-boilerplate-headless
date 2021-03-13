@@ -5,4 +5,4 @@
  * @var bool
  */
 
-define('AUTOMATIC_UPDATER_DISABLED', true);
+define("AUTOMATIC_UPDATER_DISABLED", true);

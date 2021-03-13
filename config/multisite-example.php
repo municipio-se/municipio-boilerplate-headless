@@ -3,10 +3,10 @@
 /**
  * Tell WordPress to be used as network
  */
-define('WP_ALLOW_MULTISITE', false);
+define("WP_ALLOW_MULTISITE", false);
 
-if (defined('WP_ALLOW_MULTISITE') && WP_ALLOW_MULTISITE) {
-  define('MULTISITE', true);
+if (defined("WP_ALLOW_MULTISITE") && WP_ALLOW_MULTISITE) {
+  define("MULTISITE", true);
 
   /**
    * Subdomain or subpath
@@ -15,15 +15,15 @@ if (defined('WP_ALLOW_MULTISITE') && WP_ALLOW_MULTISITE) {
    * sub.domain.com (subdomain)
    * domain.com/sub (subpath)
    */
-  define('SUBDOMAIN_INSTALL', true);
+  define("SUBDOMAIN_INSTALL", true);
 
   /**
    * Default site config
    */
-  define('DOMAIN_CURRENT_SITE', 'mysite.test');
-  define('PATH_CURRENT_SITE', '/');
-  define('SITE_ID_CURRENT_SITE', 1);
-  define('BLOG_ID_CURRENT_SITE', 1);
+  define("DOMAIN_CURRENT_SITE", "mysite.test");
+  define("PATH_CURRENT_SITE", "/");
+  define("SITE_ID_CURRENT_SITE", 1);
+  define("BLOG_ID_CURRENT_SITE", 1);
 
-  define('BasicAuthenticationProtection', true);
+  define("BasicAuthenticationProtection", true);
 }

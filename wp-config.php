@@ -18,22 +18,22 @@
  * @package WordPress
  */
 
-require_once 'config/cookie.php';
-require_once 'config/content.php';
-require_once 'config/database.php';
-require_once 'config/salts.php';
-require_once 'config/plugins.php';
-require_once 'config/update.php';
-require_once 'config/upload.php';
-require_once 'config/cron.php';
+require_once "config/cookie.php";
+require_once "config/content.php";
+require_once "config/database.php";
+require_once "config/salts.php";
+require_once "config/plugins.php";
+require_once "config/update.php";
+require_once "config/upload.php";
+require_once "config/cron.php";
 
 /**
  * Cache settings
  *
  * To enable cache add a file called cache.php with appropriate settings .
  */
-if (file_exists(__DIR__ . '/config/cache.php')) {
-  require_once 'config/cache.php';
+if (file_exists(__DIR__ . "/config/cache.php")) {
+  require_once "config/cache.php";
 }
 
 /**
@@ -42,8 +42,8 @@ if (file_exists(__DIR__ . '/config/cache.php')) {
  * To enable this site as a multisite please rename the config/multisite-example.php file to
  * multisite.php, then go ahead and edit the configurations
  */
-if (file_exists(__DIR__ . '/config/multisite.php')) {
-  require_once 'config/multisite.php';
+if (file_exists(__DIR__ . "/config/multisite.php")) {
+  require_once "config/multisite.php";
 }
 
 /**
@@ -52,15 +52,15 @@ if (file_exists(__DIR__ . '/config/multisite.php')) {
  * You can create a file called "developer.php" in the config dir and
  * put your dev-stuff and overrides inside.
  */
-if (file_exists(__DIR__ . '/config/developer.php')) {
-  require_once 'config/developer.php';
+if (file_exists(__DIR__ . "/config/developer.php")) {
+  require_once "config/developer.php";
 }
 
 /**
  * Local ip
  */
-if (file_exists(__DIR__ . '/config/local-ip.php')) {
-  require_once 'config/local-ip.php';
+if (file_exists(__DIR__ . "/config/local-ip.php")) {
+  require_once "config/local-ip.php";
 }
 
 /**
@@ -73,9 +73,9 @@ if (file_exists(__DIR__ . '/config/local-ip.php')) {
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
-if (!defined('ABSPATH')) {
-  define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined("ABSPATH")) {
+  define("ABSPATH", dirname(__FILE__) . "/");
 }
 
 /** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+require_once ABSPATH . "wp-settings.php";
