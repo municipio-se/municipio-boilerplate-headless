@@ -5,8 +5,7 @@
 /wp-content/plugins/*
 
 # Wordpress themes
-/wp-content/themes/municipio
-# /wp-content/themes/*
+/wp-content/themes/*
 # !/wp-content/themes/mytheme
 
 # Wordpress uploads
