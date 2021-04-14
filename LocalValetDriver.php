@@ -62,8 +62,8 @@ class LocalValetDriver extends BasicValetDriver {
   }
 
   public function stripMultisiteSubdir($uri) {
-    if (preg_match('/^\/.+(\/wp-[a-z-]+(\/|\.php).*)$/', $uri, $matches)) {
-      $uri = $matches[1];
+    if (preg_match('/^(.*?)(\/wp-[a-z-]+(\/.*|\.php))$/', $uri, $matches)) {
+      $uri = $matches[2];
     }
     return $uri;
   }
