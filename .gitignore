@@ -1,3 +1,6 @@
+# Wordpress mu-plugins
+/wp-content/mu-plugins/*/
+
 # Wordpress plugins
 /wp-content/plugins/*
 
