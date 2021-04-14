@@ -38,8 +38,8 @@
     "vendor-dir": "vendor"
   },
   "require": {
-    "roots/wordpress": "^5.0",
-    "municipio/municipio-bundle-headless": "dev-master"
+    "municipio/municipio-bundle-headless": "^5.0",
+    "roots/wordpress": "^5.0"
   },
   "extra": {
     "wordpress-install-dir": "wp"
