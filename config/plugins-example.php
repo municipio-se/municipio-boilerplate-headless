@@ -15,3 +15,9 @@ define("SEARCH_NOTICES_NETWORK", true);
  */
 define("G_RECAPTCHA_KEY", "");
 define("G_RECAPTCHA_SECRET", "");
+
+/**
+ * whitespace-se/wordpress-plugin-gatsby
+ */
+define("GATSBY_PREVIEW_ENDPOINT", "http://localhost:8000/wp-preview");
+define("GATSBY_REFRESH_ENDPOINTS", "http://localhost:8000/__refresh");
