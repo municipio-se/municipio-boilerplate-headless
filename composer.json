@@ -49,7 +49,7 @@
       "yarn install",
       "git init",
       "git add -A",
-      "git commit -m'🎉 Create project using municipio/municipio-boilerplate-headless'"
+      "git commit -m'init: create project using municipio/municipio-boilerplate-headless'"
     ]
   }
 }
