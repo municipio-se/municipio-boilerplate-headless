@@ -21,7 +21,7 @@
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
         "version": "5.9.5",
-        "type": "wordpress-plugin",
+        "type": "wordpress-muplugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
@@ -46,8 +46,11 @@
       "wp-content/mu-plugins/{$name}/": [
         "helsingborg-stad/modularity",
         "municipio/modularity-graphql",
+        "pristas-peter/wp-graphql-gutenberg",
+        "pristas-peter/wp-graphql-gutenberg-acf",
         "whitespace-se/wordpress-plugin-gatsby",
         "whitespace-se/wordpress-plugin-headless-cms",
+        "whitespace-se/wordpress-plugin-wp-graphql-extras",
         "wp-graphql/wp-graphql-acf",
         "wp-graphql/wp-graphql"
       ]
