@@ -38,7 +38,7 @@
     "vendor-dir": "vendor"
   },
   "require": {
-    "municipio/municipio-bundle-headless": "^5.0",
+    "municipio/municipio-bundle-headless": "^6",
     "pristas-peter/wp-graphql-gutenberg": "^0.3.8",
     "roots/wordpress": "^5.0"
   },
