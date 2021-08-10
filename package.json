@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,json,md,scss,css,yml,html,php}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md,scss,css,yml,html,php}\"",
+    "logs": "touch debug.log && tail -f debug.log"
   },
   "devDependencies": {
     "@prettier/plugin-php": "^0.16.1",
