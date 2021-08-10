@@ -46,13 +46,17 @@
       "wp-content/mu-plugins/{$name}/": [
         "helsingborg-stad/modularity",
         "municipio/modularity-graphql",
+        "municipio/municipio-gatsby",
         "pristas-peter/wp-graphql-gutenberg",
         "pristas-peter/wp-graphql-gutenberg-acf",
         "whitespace-se/wordpress-plugin-gatsby",
         "whitespace-se/wordpress-plugin-headless-cms",
         "whitespace-se/wordpress-plugin-wp-graphql-extras",
+        "wp-graphql/wp-graphql",
         "wp-graphql/wp-graphql-acf",
-        "wp-graphql/wp-graphql"
+        "wpackagist-plugin/disable-wordpress-updates",
+        "wpackagist-plugin/safe-svg",
+        "wpackagist-plugin/wp-nested-pages"
       ]
     },
     "wordpress-install-dir": "wp"
