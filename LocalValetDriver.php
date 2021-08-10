@@ -27,6 +27,8 @@ class LocalValetDriver extends BasicValetDriver {
       $uri = $matches[1];
     }
 
+    $uri = $this->forceTrailingSlash($uri);
+
     $candidates = [
       $this->asActualWordpressRootFile($sitePath, $uri),
       $this->asWordpressRootPhpIndexFileInDirectory($sitePath, $uri),
@@ -42,11 +44,7 @@ class LocalValetDriver extends BasicValetDriver {
       }
     }
 
-    return parent::frontControllerPath(
-      $sitePath,
-      $siteName,
-      $this->forceTrailingSlash($uri)
-    );
+    return parent::frontControllerPath($sitePath, $siteName, $uri);
   }
 
   public function isStaticFile($sitePath, $siteName, $uri) {
