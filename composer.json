@@ -38,7 +38,7 @@
     "vendor-dir": "vendor"
   },
   "require": {
-    "municipio/municipio-bundle-headless": "^7",
+    "municipio/municipio-bundle-headless": "v8.x-dev",
     "roots/wordpress": "^5.0"
   },
   "extra": {
