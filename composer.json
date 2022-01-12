@@ -35,7 +35,11 @@
   ],
   "config": {
     "sort-packages": true,
-    "vendor-dir": "vendor"
+    "vendor-dir": "vendor",
+    "allow-plugins": {
+      "composer/installers": true,
+      "roots/wordpress-core-installer": true
+    }
   },
   "require": {
     "municipio/municipio-bundle-headless": "v8.x-dev",
