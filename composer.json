@@ -67,10 +67,9 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "yarn install",
       "git init",
       "git add -A",
-      "git commit -m'init: create project using municipio/municipio-boilerplate-headless'"
+      "git commit -m'chore: Create project using municipio/municipio-boilerplate-headless'"
     ]
   }
 }
