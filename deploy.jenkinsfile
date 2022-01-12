@@ -1,0 +1,30 @@
+#!/usr/bin/env groovy
+
+pipeline {
+  agent any
+  environment {
+    FLIGHTPLAN_HOST = "${env.JOB_NAME}"
+    FLIGHTPLAN_DIR = "/srv/www/${env.JOB_NAME}"
+    FLIGHTPLAN_DOMAIN = "https://${env.JOB_NAME}"
+    FLIGHTPLAN_TARGET_DIR = "${env.JOB_NAME}"
+  }
+  stages {
+    stage('Build') {
+      steps {
+        nodejs('v14') {
+          sh "yarn install"
+          sh "composer install"
+        }
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sshagent(credentials: ['default-ssh-agent']) {
+          nodejs('v14') {
+            sh "fly deploy:jenkins"
+          }
+        }
+      }
+    }
+  }
+}
