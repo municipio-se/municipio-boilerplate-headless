@@ -38,5 +38,16 @@ node_modules
 # Yarn
 package-lock.json
 
+/.yarn/*
+!/.yarn/patches
+!/.yarn/plugins
+!/.yarn/releases
+!/.yarn/sdks
+
+# Swap the comments on the following lines if you want to use zero-installs
+# Documentation here: https://yarnpkg.com/features/zero-installs
+/.pnp.*
+# !/.yarn/cache
+
 # Logs
 *.log
