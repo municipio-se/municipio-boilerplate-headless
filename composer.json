@@ -38,12 +38,15 @@
     "vendor-dir": "vendor",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "ffraenz/private-composer-installer": false
     }
   },
   "require": {
     "municipio/municipio-bundle-headless": "v8.x-dev",
-    "roots/wordpress": "^5.0"
+    "oscarotero/env": "^2.1",
+    "roots/wordpress": "^5.0",
+    "vlucas/phpdotenv": "^5.4"
   },
   "extra": {
     "installer-paths": {

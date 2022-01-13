@@ -18,59 +18,104 @@
  * @package WordPress
  */
 
+/**
+ * Autoload packages
+ */
+require_once dirname(__FILE__) . "/vendor/autoload.php";
+
+use function Env\env;
+
 require_once "config/cookie.php";
+
 require_once "config/content.php";
-require_once "config/database.php";
-require_once "config/salts.php";
-require_once "config/plugins.php";
-require_once "config/update.php";
-require_once "config/upload.php";
-require_once "config/cron.php";
 
 /**
- * Cache settings
+ * Directory containing all of the site's files
  *
- * To enable cache add a file called cache.php with appropriate settings .
+ * @var string
  */
+$root_dir = __DIR__;
+
+/**
+ * Use Dotenv to set required environment variables and load .env file in root
+ * We are loading this in after checking for other config files.
+ *
+ * That means that anything in a .env-file will take precedence over anything found in a config-file.
+ */
+
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir);
+
+if (file_exists($root_dir . "/.env")) {
+  $dotenv->load();
+  $dotenv->required(["WP_HOME", "WP_SITEURL"]);
+  if (!env("DATABASE_URL")) {
+    $dotenv->required(["DB_NAME", "DB_USER", "DB_PASSWORD"]);
+  }
+}
+
+// ** MySQL settings - You can get this info from your web host ** //
+
+/**
+ * Turn of admin panel for ACF.
+ */
+define("ACF_LITE", false);
+
+/**
+ * Share search notices across the network
+ */
+define("SEARCH_NOTICES_NETWORK", true);
+
+/**
+ * Recaptcha
+ */
+define("G_RECAPTCHA_KEY", "");
+define("G_RECAPTCHA_SECRET", "");
+
+define("AUTOMATIC_UPDATER_DISABLED", true);
+
+define("WP_MEMORY_LIMIT", "64M");
+
+define("DISABLE_WP_CRON", env("DISABLE_WP_CRON"));
+
 if (file_exists(__DIR__ . "/config/cache.php")) {
   require_once "config/cache.php";
 }
 
 /**
- * Multisite settings
- *
- * To enable this site as a multisite please rename the config/multisite-example.php file to
- * multisite.php, then go ahead and edit the configurations
+ * Tell WordPress to be used as network
  */
-if (file_exists(__DIR__ . "/config/multisite.php")) {
-  require_once "config/multisite.php";
-}
+define("WP_ALLOW_MULTISITE", true);
+
+define("MULTISITE", (bool) env("MULTISITE"));
 
 /**
- * Developer settings
- *
- * You can create a file called "developer.php" in the config dir and
- * put your dev-stuff and overrides inside.
+ * Subdomain or subpath
+ * Set to true for subdomain, false for subpath
+ * Examples:
+ * sub.domain.com (subdomain)
+ * domain.com/sub (subpath)
  */
-if (file_exists(__DIR__ . "/config/developer.php")) {
-  require_once "config/developer.php";
-}
+define("SUBDOMAIN_INSTALL", false);
 
 /**
- * Local ip
+ * Default site config
  */
+define("DOMAIN_CURRENT_SITE", env("DOMAIN_CURRENT_SITE"));
+define("PATH_CURRENT_SITE", "/");
+define("SITE_ID_CURRENT_SITE", 1);
+define("BLOG_ID_CURRENT_SITE", 1);
+
+define("WP_DEBUG", env("WP_DEBUG"));
+define("WP_DEBUG_DISPLAY", env("WP_DEBUG_DISPLAY"));
+define(
+  "WP_DEBUG_LOG",
+  env("WP_DEBUG_LOG") ? dirname(ABSPATH) . "/" . env("WP_DEBUG_LOG") : null
+);
+define("GRAPHQL_DEBUG", true);
+
 if (file_exists(__DIR__ . "/config/local-ip.php")) {
   require_once "config/local-ip.php";
 }
-
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
- */
-
-/* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if (!defined("ABSPATH")) {
@@ -78,9 +123,56 @@ if (!defined("ABSPATH")) {
 }
 
 /**
- * Autoload packages
+ * Document Root
+ *
+ * @var string
  */
-require_once dirname(__FILE__) . "/vendor/autoload.php";
+$webroot_dir = $root_dir . "/wp";
+
+define("WP_ENV", env("WP_ENV"));
+
+define("WP_HOME", env("WP_HOME"));
+
+define("WP_PREFIX", env("WP_PREFIX"));
+$table_prefix = WP_PREFIX;
+
+define("WP_SITEURL", env("WP_SITEURL"));
+
+/** The name of the database for WordPress */
+define("DB_NAME", env("DB_NAME"));
+
+/** MySQL database username */
+define("DB_USER", env("DB_USER"));
+
+/** MySQL database password */
+define("DB_PASSWORD", env("DB_PASSWORD"));
+
+/** MySQL hostname */
+define("DB_HOST", env("DB_HOST"));
+
+/** Database Charset to use in creating database tables. */
+define("DB_CHARSET", "utf8mb4");
+
+/** The Database Collate type. Don't change this if in doubt. */
+define("DB_COLLATE", "");
+
+define("GATSBY_BASE_URL", env("GATSBY_BASE_URL"));
+
+define("GATSBY_REFRESH_ENDPOINTS", env("GATSBY_REFRESH_ENDPOINTS"));
+
+define("GATSBY_PREVIEW_ENDPOINT", env("GATSBY_PREVIEW_ENDPOINT"));
+
+define("CI_NOTIFY_URLS", env("CI_NOTIFY_URLS"));
+
+// Salts
+define("AUTH_KEY", env("AUTH_KEY"));
+define("SECURE_AUTH_KEY", env("SECURE_AUTH_KEY"));
+define("LOGGED_IN_KEY", env("LOGGED_IN_KEY"));
+define("NONCE_KEY", env("NONCE_KEY"));
+define("AUTH_SALT", env("AUTH_SALT"));
+define("SECURE_AUTH_SALT", env("SECURE_AUTH_SALT"));
+define("LOGGED_IN_SALT", env("LOGGED_IN_SALT"));
+define("NONCE_SALT", env("NONCE_SALT"));
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . "wp-settings.php";

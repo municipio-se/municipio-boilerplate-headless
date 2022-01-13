@@ -13,7 +13,7 @@ class LocalValetDriver extends BasicValetDriver {
   public function serves($sitePath, $siteName, $uri) {
     return is_dir($sitePath . $this->wp_root . "/") &&
       file_exists($sitePath . "/wp-config.php") &&
-      is_dir($sitePath . "/config/");
+      (is_dir($sitePath . "/config/") || file_exists($sitePath . "/.env"));
   }
 
   public function frontControllerPath($sitePath, $siteName, $uri) {
