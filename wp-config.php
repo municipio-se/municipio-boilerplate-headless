@@ -111,7 +111,7 @@ define(
   "WP_DEBUG_LOG",
   env("WP_DEBUG_LOG") ? dirname(ABSPATH) . "/" . env("WP_DEBUG_LOG") : null
 );
-define("GRAPHQL_DEBUG", true);
+define("GRAPHQL_DEBUG", env("GRAPHQL_DEBUG"));
 
 if (file_exists(__DIR__ . "/config/local-ip.php")) {
   require_once "config/local-ip.php";
@@ -157,9 +157,7 @@ define("DB_CHARSET", "utf8mb4");
 define("DB_COLLATE", "");
 
 define("GATSBY_BASE_URL", env("GATSBY_BASE_URL"));
-
 define("GATSBY_REFRESH_ENDPOINTS", env("GATSBY_REFRESH_ENDPOINTS"));
-
 define("GATSBY_PREVIEW_ENDPOINT", env("GATSBY_PREVIEW_ENDPOINT"));
 
 define("CI_NOTIFY_URLS", env("CI_NOTIFY_URLS"));
