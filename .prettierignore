@@ -27,3 +27,4 @@ tmp
 *.min.*
 *.min-*
 acf-fields
+CHANGELOG.md
