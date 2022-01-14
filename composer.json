@@ -44,7 +44,6 @@
   },
   "require": {
     "municipio/municipio-bundle-headless": "^9",
-    "oscarotero/env": "^2.1",
     "roots/wordpress": "^5.0",
     "vlucas/phpdotenv": "^5.4"
   },
