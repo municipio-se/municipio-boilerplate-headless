@@ -1,7 +1,7 @@
 {
   "name": "municipio/municipio-boilerplate-headless",
   "description": "Boilerplate for a headless setup of Wordpress with Municipio",
-  "license": "AGPL",
+  "license": "AGPL-3.0-or-later",
   "authors": [
     {
       "name": "Whitespace Dev",
