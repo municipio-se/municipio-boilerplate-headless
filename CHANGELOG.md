@@ -1,3 +1,17 @@
+## [1.0.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/0.6.0...1.0.0) (2022-01-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Upgrade bundle
+* Remove boilerplate code for ACF
+
+### Features
+
+* Add Yarn lock file ([8fbd7a9](https://github.com/municipio-se/municipio-boilerplate-headless/commit/8fbd7a93651210bcf8257e441c4faff9b590c12c))
+* **deps:** Upgrade bundle ([965445a](https://github.com/municipio-se/municipio-boilerplate-headless/commit/965445a8b17f98fae38a8f886a6c0cabde28448f))
+* Remove boilerplate code for ACF ([f5dc415](https://github.com/municipio-se/municipio-boilerplate-headless/commit/f5dc415fc77a32b0bed3b301f689cb1b189b5ac9))
+
 ## [0.6.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/0.5.1...0.6.0) (2022-01-14)
 
 
@@ -9,8 +23,8 @@
 ### Features
 
 * Add `GRAPHQL_DEBUG` to env ([8f1db50](https://github.com/municipio-se/municipio-boilerplate-headless/commit/8f1db50aedb86c93f9649503b4c2178d248cd6e5))
-* **deps:** Update municipio/municipio-bundle-headless ([4befca6](https://github.com/municipio-se/municipio-boilerplate-headless/commit/4befca6bd92babb4693ed575dd37529af0a9e9bc))
 * Add Flightplan ([15c5e56](https://github.com/municipio-se/municipio-boilerplate-headless/commit/15c5e567885d18eb1954d837c6247ebc169af8a4))
+* **deps:** Update municipio/municipio-bundle-headless ([4befca6](https://github.com/municipio-se/municipio-boilerplate-headless/commit/4befca6bd92babb4693ed575dd37529af0a9e9bc))
 * Update post-create-project-cmd ([3f42091](https://github.com/municipio-se/municipio-boilerplate-headless/commit/3f42091a3acb0f6a6913f6721a7d2c5ce13228f1))
 * Use classic Yarn ([e1692df](https://github.com/municipio-se/municipio-boilerplate-headless/commit/e1692df433d5e132f39f3988801d77ebe056aa55))
 

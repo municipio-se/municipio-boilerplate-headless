@@ -1,8 +1,8 @@
 {
   "name": "municipio-boilerplate-headless",
   "author": "Whitespace Dev <code@whitespace.se>",
-  "version": "0.6.0",
-  "license": "AGPL",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-or-later",
   "private": true,
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,json,md,scss,css,yml,html,php}\"",
