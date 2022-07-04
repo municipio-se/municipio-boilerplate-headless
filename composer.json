@@ -27,7 +27,7 @@
     }
   },
   "require": {
-    "municipio/municipio-bundle-headless": "^10.0",
+    "municipio/municipio-bundle-headless": "dev-next",
     "roots/wordpress": "^5.0",
     "vlucas/phpdotenv": "^5.4"
   },
