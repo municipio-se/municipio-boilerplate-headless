@@ -1,8 +1,9 @@
 <?php
-/*
-Plugin Name: Site URL fixer
-Description: Fixes site URLs and home URLs for installs with a subdirectory for the WordPress core files. Works with multisite installs.
-*/
+
+/**
+ * Fixes site URLs and home URLs for installs with a subdirectory for the
+ * WordPress core files.
+ */
 
 define("WORDPRESS_INSTALL_DIR", "/wp");
 

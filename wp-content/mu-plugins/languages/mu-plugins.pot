@@ -1,0 +1,31 @@
+# Copyright (C) 2022 Whitespace
+# This file is distributed under the same license as the Must-Use Plugins Handler plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Must-Use Plugins Handler\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mu-plugins\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-09-25T12:22:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: mu-plugins\n"
+
+#. Plugin Name of the plugin
+msgid "Must-Use Plugins Handler"
+msgstr ""
+
+#. Description of the plugin
+msgid "Auto-loads regular plugins in mu-plugins and translations"
+msgstr ""
+
+#. Author of the plugin
+msgid "Whitespace"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.whitespace.se/"
+msgstr ""

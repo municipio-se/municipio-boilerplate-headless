@@ -1,5 +1,7 @@
 # Wordpress mu-plugins
-/wp-content/mu-plugins/*/
+/wp-content/mu-plugins/*
+!/wp-content/mu-plugins/*.php
+!/wp-content/mu-plugins/languages
 
 # Wordpress plugins
 /wp-content/plugins/*
