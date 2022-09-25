@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/1.0.0...2.0.0) (2022-09-25)
+
+
+### Features
+
+* Add Gatsby plugin example env ([6cfa964](https://github.com/municipio-se/municipio-boilerplate-headless/commit/6cfa9640ede8ee47a29687e586ed4b018ff5b9b4))
+* Add support for psr-4 autoload in mu-plugins ([e88e47a](https://github.com/municipio-se/municipio-boilerplate-headless/commit/e88e47a9cf27eaca4362353571bf09eef522e471))
+* Add translations for mu plugins ([d68577c](https://github.com/municipio-se/municipio-boilerplate-headless/commit/d68577cc9110f47bed59580f99e097fd7f224ddb))
+* Use dev version of bundle ([6a2e12c](https://github.com/municipio-se/municipio-boilerplate-headless/commit/6a2e12cbe001a6b0e44154e82a8c85ba026b4fe0))
+
 ## [1.0.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/0.6.0...1.0.0) (2022-01-25)
 
 
