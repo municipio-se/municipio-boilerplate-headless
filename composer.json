@@ -26,6 +26,11 @@
       "ffraenz/private-composer-installer": false
     }
   },
+  "autoload": {
+    "psr-4": {
+      "": "wp-content/mu-plugins/src/"
+    }
+  },
   "require": {
     "municipio/municipio-bundle-headless": "dev-next",
     "roots/wordpress": "^5.0",

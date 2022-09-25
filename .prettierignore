@@ -8,6 +8,7 @@ package-lock.json
 !/wp-content/mu-plugins
 /wp-content/mu-plugins/*/*
 !/wp-content/mu-plugins/languages/*
+!/wp-content/mu-plugins/src/*
 
 # Plugins
 !/wp-content/plugins
