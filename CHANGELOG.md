@@ -1,3 +1,26 @@
+## [3.0.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/2.0.0...3.0.0) (2023-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Share language files between deploys
+* PHP 8 compatibility
+
+### Features
+
+* Add front page on install ([ab2ca43](https://github.com/municipio-se/municipio-boilerplate-headless/commit/ab2ca4337193de767b0b1e1cda735337d5d3705e))
+* Enable simplified mod posts layouts ([61ba06a](https://github.com/municipio-se/municipio-boilerplate-headless/commit/61ba06ae44a52475b8d4e7dc16eaea4e1dd56063))
+
+
+### Bug Fixes
+
+* Disable Gutenberg for widgets ([233f00f](https://github.com/municipio-se/municipio-boilerplate-headless/commit/233f00f51a030768b2836bebf151bcc25c9cd095))
+* Disable unusable options and features ([0752b1b](https://github.com/municipio-se/municipio-boilerplate-headless/commit/0752b1b8e24b20a0997417925a612144e7a3bf84))
+* Don't run composer install twice during deploy ([4083601](https://github.com/municipio-se/municipio-boilerplate-headless/commit/408360104e2abcc6edd07cf01a5d61f521ba464b))
+* PHP 8 compatibility ([392976c](https://github.com/municipio-se/municipio-boilerplate-headless/commit/392976c22bcb58bf699fe1370c19f6fb544bdbd1))
+* Share language files between deploys ([0c8ed97](https://github.com/municipio-se/municipio-boilerplate-headless/commit/0c8ed9768893d5e3eb9a07da3fc06c63ed21c5e3))
+* Translations for Modularity not loaded correctly ([3f33409](https://github.com/municipio-se/municipio-boilerplate-headless/commit/3f33409b7bd691a01d5e3547dcda0d0f6f12800a))
+
 ## [2.0.0](https://github.com/municipio-se/municipio-boilerplate-headless/compare/1.0.0...2.0.0) (2022-09-25)
 
 
