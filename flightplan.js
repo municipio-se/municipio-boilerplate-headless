@@ -1,5 +1,7 @@
 const plan = require("flightplan");
-const { configure } = require("@whitespace/flightplan/municipio");
+const { configure } = require("@whitespace/flightplan/municipio2");
+
+const phpVersion = "php8.1";
 
 let config = {
   keepReleases: 5,
@@ -14,6 +16,7 @@ let config = {
   ignoredFilesAndFolders: [
     // Files to NOT transfer
   ],
+  composerInstallArgs: "--ignore-platform-reqs --no-dev --no-interaction",
 };
 
 plan.target(
@@ -29,8 +32,11 @@ plan.target(
     domain: process.env.FLIGHTPLAN_DOMAIN,
     root: "/srv/www",
     targets: [process.env.FLIGHTPLAN_TARGET_DIR],
-    phpVersion: "php7.4",
   },
 );
 
 configure(plan, config);
+
+plan.remote(`deploy`, (remote) => {
+  remote.exec(`sudo service ${phpVersion}-fpm reload`);
+});
