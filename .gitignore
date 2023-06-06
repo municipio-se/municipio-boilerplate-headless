@@ -14,6 +14,10 @@
 # Wordpress uploads
 /wp-content/uploads/*
 
+# Wordpress languages
+/wp-content/languages/*
+!/wp-content/languages/.gitkeep
+
 # Wordpress config
 /config/database.php
 /config/salts.php
@@ -54,3 +58,6 @@ package-lock.json
 
 # Logs
 *.log
+
+# Flightplan
+/dumps

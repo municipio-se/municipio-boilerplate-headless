@@ -9,12 +9,14 @@ let config = {
   themes: [],
   shared: {
     ".env": true,
+    languages: `wp-content/languages`,
   },
   filesAndFolders: [
     // Additional files to transfer
   ],
   ignoredFilesAndFolders: [
     // Files to NOT transfer
+    "wp-content/languages",
   ],
   composerInstallArgs: "--ignore-platform-reqs --no-dev --no-interaction",
 };
